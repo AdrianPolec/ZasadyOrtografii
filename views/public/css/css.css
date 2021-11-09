@@ -1,0 +1,161 @@
+body {
+
+    background: url('krolik.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.header {
+    color: rgb(37, 37, 11);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+
+.fb-login-button {
+    display: inline-block;
+    margin-top: 25px;
+    margin-right: 120px;
+}
+
+.ciecie {
+    clear: both;
+}
+
+.NaglowekL {
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 3px;
+    margin-left: 127px;
+    color: rgb(0, 0, 0);
+
+}
+
+.Buttons {
+    float: right;
+}
+
+.Rejestracja {
+    margin-right: 20px;
+    width: 110px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+}
+
+.Rejestracja:hover {
+    box-shadow: 2px 2px 4px #000000;
+    cursor: pointer;
+    transition: 450ms;
+
+}
+
+.Like {
+    margin-right: 30px;
+    width: 90px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+}
+
+.Like:hover {
+    box-shadow: 2px 2px 4px #000000;
+    cursor: pointer;
+    transition: 450ms;
+}
+
+.Content {
+    text-align: center;
+}
+
+.Login {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.Haslo {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.zaloguj {
+    text-align: center;
+    margin-left: 254px;
+}
+
+.Zaloguj {
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 50px;
+}
+
+.Zaloguj:hover {
+    box-shadow: 2px 2px 4px #000000;
+    cursor: pointer;
+    transition: 450ms;
+}
+
+
+.NaglowekR {
+    text-align: center;
+    display: none;
+    letter-spacing: 2px;
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+}
+
+.rgstrForm {
+    padding-top: 15px;
+    margin: auto;
+    height: 500px;
+    width: 550px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: none;
+    text-align: left;
+    box-shadow: 3px 3px 3px 3px rgb(43, 80, 161);
+}
+
+.tekstowy {
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.tekstowy input {
+    width: 200px;
+    margin-right: 100px;
+    float: right;
+
+}
+
+.info {
+
+    margin-left: 195px;
+    height: 15px;
+    font-size: 13px;
+    color: red;
+}
+
+.Zarejestruj {
+    margin-left: 225px;
+    margin-top: 65px;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.fas {
+    margin-left: 20px;
+    cursor: pointer;
+}

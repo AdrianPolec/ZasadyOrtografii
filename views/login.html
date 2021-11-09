@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/all.min.css">
+    <link rel='stylesheet' href='public/css/css.css' type='text/css'/>
+</head>
+
+<body>
+<h1 class="header">JĘZYK POLSKI</h1>
+
+<div class="Buttons">
+    <button class="Rejestracja">Zarejestruj</button>
+</div>
+<!-- Wymagane - facebook -->
+<div id="fb-root"></div>
+<script
+        async defer crossorigin="anonymous"
+<!--        src="https://connect.facebook.net/pl_POL/sdk.js">-->
+
+</script>
+
+<div class="Content">
+    <h1 class="NaglowekL">Logowanie</h1>
+    <label>
+        <input type="text" class="Login" placeholder="Nazwa użytkownika">
+    </label>
+    <label>
+        <input type="password" class="Haslo" placeholder="Hasło">
+    </label>
+    <div class='loginfo'></div>
+</div>
+
+<div class="zaloguj">
+    <div
+            class="fb-login-button" data-auto-logout-link="false" data-button-type="login_with" data-layout="rounded"
+            data-size="large" data-use-continue-as="true"
+            onlogin='viaFacebook();'>
+
+    </div>
+    <div id='ciecie'></div>
+    <button class="Zaloguj">Zaloguj się</button>
+</div>
+
+
+<h1 class="NaglowekR">Rejestracja</h1>
+<div class="rgstrForm">
+    <i class="fas fa-arrow-left fa-2x"></i>
+
+    <div class="tekstowy">
+        <label for="nazwa">Nazwa użytkownika:
+            <input class='rinput' id='nazwa' type="text" placeholder="Podaj nazwę użytkownika...">
+        </label>
+        <div class='info nazwa'></div>
+    </div>
+    <div class="tekstowy">
+        <label for="imie">Imię:
+            <input class='rinput' id='imie' type="text" placeholder="Podaj imię...">
+        </label>
+        <div class='info imie'></div>
+    </div>
+    <div class="tekstowy">
+        <label for="nazwisko">Nazwisko:
+            <input class='rinput' id='nazwisko' type="text" placeholder="Podaj nazwisko...">
+        </label>
+        <div class='info nazwisko'></div>
+    </div>
+    <div class="tekstowy">
+        <label for="mail">Adres e-mail:
+            <input class='rinput' id='mail' type="text" placeholder="Podaj swój e-mail...">
+        </label>
+        <div class='info mail'></div>
+    </div>
+    <div class="tekstowy">
+        <label for="pass">Hasło:
+            <input class='rinput' id='pass' type="password" placeholder="Podaj hasło...">
+        </label>
+        <div class='info pass'></div>
+    </div>
+    <div class="tekstowy">
+        <label for="passc">Potwierdź hasło:
+            <input class='rinput' id='passc' type="password" placeholder="Wpisz hasło jeszcze raz...">
+        </label>
+        <div class='info passc'></div>
+    </div>
+
+    <button class="Zarejestruj">Zarejestruj.</button>
+
+</div>
+
+
+<script src='public/js/main.js' type='module'></script>
+
+
+</body>
+
+</html>
