@@ -7,7 +7,7 @@ body {
 
 }
 
-.header {
+.Header {
     text-align: center;
     font-size: 30px;
     letter-spacing: 2px;
@@ -72,8 +72,8 @@ body {
 
 }
 
- #Graj {
- /*!important*/
+#Graj {
+    /*!important*/
     padding: 25px;
     height: 400px;
     width: 600px;

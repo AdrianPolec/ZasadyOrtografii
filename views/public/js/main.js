@@ -2,8 +2,8 @@ const $BtnL = document.querySelector('.Zaloguj');
 const $BtnR = document.querySelector('.Rejestracja');
 const $BackIcn = document.querySelector('.fas');
 const $BtnRgst = document.querySelector('.Zarejestruj');
-const $rgstrForm = document.querySelector('.rgstrForm');
-const $naglowek = document.querySelector('.NaglowekR');
+const $rgstrForm = document.querySelector('.RgstrForm');
+const $naglowek = document.querySelector('.HeaderR');
 const $logininpt = document.querySelector('.Login');
 const $passwordinpt = document.querySelector('.Haslo');
 const $logInfo = document.querySelector('.loginfo')
@@ -12,15 +12,12 @@ const $mailinfo = document.querySelector('.mail')
 let $loginEl = [
     document.querySelector('.Content'),
     document.querySelector('.Buttons'),
-    document.querySelector('.NaglowekL'),
+    document.querySelector('.HeaderL'),
     document.querySelector('.zaloguj')];
 let info;
 let user;
 let userTologIn;
 let imie_i_nazwisko;
-
-
-//opcja onlogin, albo login finished powinna wywolywac funkcje z fetchem '/Fbl', dodac FB.logout do opcji wylogowania
 
 window.fbAsyncInit = function () {
     FB.init({
@@ -52,39 +49,11 @@ window.viaFacebook = () => {
         console.log(response.authResponse)
 
         if (response.status === 'connected') {
-            // fetch(`https://graph.facebook.com/${response.authResponse.userID}?fields=id,name,email&access_token=${response.authResponse.accessToken}`, {
-            //     method: 'GET',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //         'Type': 'OAuthException'
-            //     },
-            // })
-            //     .then(res => res.json())
-            //     .then(res => console.log(res))
-            //     .catch(err => console.log(err))
-
-            // FB.Event.subscribe('auth.login', function (response) {
-            //     console.log(response);
-            // });
-            // const loadUserName = (response) => {
-            //     return new Promise(resolve => {
-            //         FB.api(`/me?access_token=${response.authResponse.accessToken}`, (data) => {
-            //             if (data) {
-            //                 imie_i_nazwisko = data.name
-            //                 console.log(imie_i_nazwisko)
-            //             }
-            //         })
-            //         resolve(imie_i_nazwisko)
-            //     })
-            // }
             FB.api(`/me?access_token=${response.authResponse.accessToken}`, (data) => {
                 if (data) {
                     console.log(imie_i_nazwisko)
                     imie_i_nazwisko = data.name
 
-                    // const asyncCall = async (response) => {
-                    //     const result = await loadUserName(response);
-                    //     if (result) {
                     fetch('/Fbl', {
                         method: 'POST',
                         body: JSON.stringify({
@@ -106,10 +75,6 @@ window.viaFacebook = () => {
                             }
                         })
                         .catch(err => console.log(err))
-                    // }
-                    // }
-
-                    // asyncCall(response);
                 }
             });
         }
@@ -165,7 +130,6 @@ const sendR = () => {
         .catch(err => console.log(err))
 }
 
-// KONSTRUKTOR OBIEKTU UŻYTKOWNIKA, KLASA USER
 function User(nazwa, imie, nazwisko, email, haslo, hasloconf) {
     return {
         nazwa,
@@ -177,7 +141,6 @@ function User(nazwa, imie, nazwisko, email, haslo, hasloconf) {
     }
 }
 
-// WALIDACJA PÓL, STWORZENIE OBIEKTU USER, WYWOŁANIE FUNKCJI WYŚLIJ
 const checkAndCreate = () => {
     user = undefined;
     const inpts = document.querySelectorAll('.rinput')
@@ -204,7 +167,7 @@ const checkAndCreate = () => {
     })
     if (user) {
         let size = 0;
-        Object.values(user).forEach(el => (el !== '') ? size++ : console.log('nie git'))
+        Object.values(user).forEach(el => (el !== '') ? size++ : console.log('err'))
         if (size === 6) {
             inpts.forEach(el => el.value = '');
             JSON.stringify(user);
@@ -215,8 +178,6 @@ const checkAndCreate = () => {
 
 $BtnRgst.addEventListener('click', checkAndCreate);
 
-
-// LOGOWANIE
 const sendL = () => {
     fetch('/l', {
         method: 'POST',
@@ -261,8 +222,6 @@ const checkToLogIn = () => {
         $passwordinpt.value = '';
     }
 }
-
 $BtnL.addEventListener('click', checkToLogIn);
-// window.addEventListener('DOMContentLoaded', checkFBlogin);
 
 

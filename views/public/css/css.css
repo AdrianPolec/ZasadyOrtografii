@@ -7,7 +7,7 @@ body {
     background-size: cover;
 }
 
-.header {
+.Header {
     color: rgb(37, 37, 11);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
@@ -21,11 +21,11 @@ body {
     margin-right: 120px;
 }
 
-.ciecie {
+.divide {
     clear: both;
 }
 
-.NaglowekL {
+.HeaderL {
     text-align: center;
     font-size: 32px;
     letter-spacing: 3px;
@@ -103,7 +103,7 @@ body {
 }
 
 
-.NaglowekR {
+.HeaderR {
     text-align: center;
     display: none;
     letter-spacing: 2px;
@@ -111,7 +111,7 @@ body {
     color: rgb(0, 0, 0);
 }
 
-.rgstrForm {
+.RgstrForm {
     padding-top: 15px;
     margin: auto;
     height: 500px;

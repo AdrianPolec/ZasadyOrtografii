@@ -14,7 +14,6 @@ const FbUser = new mongoose.Schema({
         type: Date,
     }
 });
-
 const fbUserModel = mongoose.model('FbUser', FbUser, 'Users');
 
 module.exports = fbUserModel;
